@@ -40,6 +40,7 @@ CONFIG_SECTION_MISMATCH_WARN_ONLY=y \
 
 # main compilation process
 DATE_START=$(date +"%s")
+make ${ARGS} clean && make ${ARGS} mrproper
 make ${ARGS} r8q_defconfig custom.config
 make ${ARGS} menuconfig
 make ${ARGS} Image.gz || exit 1
