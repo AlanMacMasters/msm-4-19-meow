@@ -2,10 +2,10 @@
 
 LLVM_PATH="$HOME/clang-r510928/bin/"
 
-read -p "Digite um nome para o kernel: " KERNEL_NAME
+read -p "Enter Kernel name: " KERNEL_NAME
 
 if [ -z "$KERNEL_NAME" ]; then
-    echo "Nome do kernel não pode ser vazio. Saindo."
+    echo "Kernel name cannot be empty. Leaving."
     exit 1
 fi
 
@@ -31,7 +31,7 @@ cat $DTB_OUT/*.dtb > AnyKernel3/dtb
 
 DATE_END=$(date +"%s")
 DIFF=$(($DATE_END - $DATE_START))
-echo "Tempo de compilação: $(($DIFF / 60)) minutos(s) and $(($DIFF % 60)) segundos."
+echo "Compile time: $(($DIFF / 60)) minutes(s) and $(($DIFF % 60)) seconds."
 
 cp $IMAGE AnyKernel3/Image.gz
 cd AnyKernel3
