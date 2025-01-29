@@ -155,3 +155,6 @@ security/samsung/defex_lsm/pack_rules
 
 # AK#
 AnyKernel3/
+
+#toolchain
+toolchains/
