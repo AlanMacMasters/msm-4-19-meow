@@ -1,6 +1,9 @@
 #!/bin/bash
 export RDIR="$(pwd)"
 
+#init ksu next
+git submodule init && git submodule update
+
 read -p "Enter Kernel name: " KERNEL_NAME
 
 # clang-r510928
