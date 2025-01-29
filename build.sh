@@ -34,6 +34,8 @@ CC=${LLVM_PATH}/clang \
 CROSS_COMPILE=${GCC_PATH}/aarch64-none-linux-gnu- \
 DTC_EXT=$(pwd)/tools/dtc \
 CONFIG_BUILD_ARM64_DT_OVERLAY=y \
+KCFLAGS=-w \
+CONFIG_SECTION_MISMATCH_WARN_ONLY=y \
 "
 
 # main compilation process
