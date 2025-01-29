@@ -12,6 +12,7 @@ if [ ! -d "${RDIR}/toolchains/clang-r510928" ]; then
     ( wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/tags/android-14.0.0_r33/clang-r510928.tar.gz && \
       tar -xvf clang-r510928.tar.gz && rm clang-r510928.tar.gz  
     )
+    cd ${RDIR}
 fi
 
 # tc paths
