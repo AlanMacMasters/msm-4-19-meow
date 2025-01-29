@@ -37,7 +37,7 @@ CONFIG_BUILD_ARM64_DT_OVERLAY=y \
 
 # main compilation process
 DATE_START=$(date +"%s")
-make ${ARGS} r8q_defconfig
+make ${ARGS} r8q_defconfig custom.config
 make ${ARGS} menuconfig
 make ${ARGS} Image.gz || exit 1
 make ${ARGS} dtbs
